@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9FAFB;;
+}
+
+ h2 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    letter-spacing: 0.8px;
+}
+
+p {
+    text-align: center;
+    padding: 6px;
+    letter-spacing: 0.6px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.header_primario {
+    background-color:#279CF1;
+}
+
+.header_primario .logo_titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.header_primario .logo_titulo img {
+    width: 45px;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.header_primario div h1 {
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    
+     letter-spacing: 0.5px;
+    
+}
+
+.header_secundario {
+    background-color: #1D4ED8;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 15px; */
+    position: relative;
+}
+
+.header_secundario img {
+    position: absolute;
+    opacity: 0.05;
+}
+
+.header_secundario div {
+    margin: 80px auto 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_secundario div h2 {
+    font-size: 20px;
+    padding: 10px;
+    letter-spacing: 1.3px;
+    text-align: center;
+}
+
+.header_secundario div p {
+    padding: 13px;
+    font-size: 13.4px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+main {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .sessao_1 .nossos_encontros {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+main .sessao_1 .nossos_encontros h2 {
+   color: #1F2937;
+   font-weight: 900;
+   padding: 6px;
+   text-align: center;
+}
+
+main .sessao_1 .nossos_encontros p {
+    padding: 8px;
+}
+
+main .sessao_1 .nossos_encontros p, main .card_DiasDe_Cultos .card p {
+    color: #4B5563;
+}
+
+main .sessao_1 .card_DiasDe_Cultos {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.card_DiasDe_Cultos .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #cfdef3;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.card_DiasDe_Cultos .card:hover {
+    border: 4px solid #279CF1;
+
+}
+.card_DiasDe_Cultos .card img {
+    width: 45px;
+    background-color: #DBEAFE;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+.card_DiasDe_Cultos .card h2 {
+    font-size: 17px;
+}
+
+.card_DiasDe_Cultos .card span {
+    background-color: #F3F4F6;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.sessao_2 {
+    background-color: white;
+    margin-top: 60px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+}
+
+.sessao_2 h2 {
+    margin-top: 40px;
+    color: #1F2937;
+    margin-bottom: 15px;
+}
+
+.sessao_2 .informacoes_De_Localizacao {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9FAFB;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.sessao_2 .informacoes_De_Localizacao address {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao_2 .informacoes_De_Localizacao .endereco_Igreja {
+    font-size: 13px;
+    width: 70%;
+    height: 170px;
+    padding: 5px;
+    border: 1px solid rgb(189, 189, 223);
+    border-radius: 10px;
+    background-color: #dee3e9;
+    line-height: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.8s;
+}
+
+.sessao_2 .informacoes_De_Localizacao .endereco_Igreja:hover {
+    border: 3px solid rgb(194, 194, 214);
+    background-color: #cfdef3;
+}
+
+.sessao_2 .informacoes_De_Localizacao .endereco_Igreja img {
+    margin: 10px;
+}
+
+.sessao_2 .informacoes_De_Localizacao .endereco_Igreja h2 {
+    font-size: 15.5px;
+    color: #1F2937;
+    margin-top: -0.00px;
+}
+
+.sessao_2 .informacoes_De_Localizacao .endereco_Igreja p {
+   color: #4B5563;
+   margin-top: -10px;
+}
+
+.sessao_2 .informacoes_De_Localizacao address iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.sessao_2 .contato_inst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 70%;
+    height: 170px;
+    border: 1px solid rgb(189, 189, 223);
+    border-radius: 10px;
+    background-color: #dee3e9;
+    transition: 0.8s;
+}
+
+.sessao_2 .contato_inst:hover {
+    border: 3px solid rgb(136, 136, 236);
+    background-color: #7aa7e6;
+}
+
+.sessao_2 .contato_inst img {
+    margin: 10px;
+}
+
+.sessao_2 .contato_inst h2 {
+    font-size: 15.5px;
+    color: #1F2937;
+    margin-top: 0.40px;
+}
+
+.sessao_2 .contato_inst a {
+    text-decoration: none;
+    color: white;
+    background-color: #1D4ED8;
+    padding: 7px;
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1.4px;
+    width: 130px;
+    text-align: center;
+}
+
+footer {
+    background-color: #3116e0;
+    padding: 6px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 12px;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+footer div a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    transition: 0.8s;
+    font-size: 11px;
+}
+
+footer div a:hover {
+    color: #0cf720;
+}
+
+/* estilo para telas maiores */
+@media (min-width: 801px) {
+
+    .header_primario .logo_titulo img {
+        width:120px;
+        padding: 12px;
+    }
+
+    .header_primario div h1 {
+        font-size: 240%;
+        padding: 8px;
+    }
+
+    .header_secundario div h2 {
+        font-size: 200%;
+    }
+
+    .header_secundario div p {
+        font-size: 120%;
+        line-height: 23px;
+    }
+
+    .conteudo_principal .sessao_1 .nossos_encontros h2 {
+        font-size: 250%;
+    }
+
+        .conteudo_principal .sessao_1 .card_DiasDe_Cultos img {
+            width: 80px;
+            background: none;
+        }
+
+    .conteudo_principal .sessao_1 .card_DiasDe_Cultos h2 {
+        font-size: 30px;
+    }
+
+    .conteudo_principal .sessao_1 .card_DiasDe_Cultos p {
+            font-size: 24px;
+        }
+
+        .conteudo_principal .sessao_1 .card_DiasDe_Cultos span {
+            font-size: 23px;
+            padding: 5px;
+            background: #0d64e6;
+            color: white;
+        }
+
+        .conteudo_principal .sessao_2 h2 {
+            font-size: 200%;
+        }
+
+         .conteudo_principal .sessao_2 .endereco_Igreja {
+            height: auto;
+            padding: 40px;
+        }
+        
+        .conteudo_principal .sessao_2 .endereco_Igreja img {
+            width: 60px;
+        }
+
+        .conteudo_principal .sessao_2 .endereco_Igreja h2 {
+            font-size: 25px;
+        }
+        .conteudo_principal .sessao_2 .endereco_Igreja p {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address iframe {
+            height: 400px;
+        }
+
+        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst {
+            height: auto;
+            padding: 26px;
+
+        }
+
+        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst img {
+            width: 50px;
+        }
+
+        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst h2 {
+            font-size: 25px;
+        }
+
+        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst a {
+            font-size: 24px;
+            width: 40%;
+            text-align: center;
+            background-color: #1D4ED8;
+        } 
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer div a {
+            font-size: 14px;
+        }
+
+
+}
+
+
+
+
+
