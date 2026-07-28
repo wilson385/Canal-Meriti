@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
@@ -30,6 +29,22 @@ p {
     font-style: normal;
 }
 
+span {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    letter-spacing: 0.8px;
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
 .header_primario {
     background-color:#279CF1;
 }
@@ -56,10 +71,7 @@ p {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
-    
      letter-spacing: 0.5px;
-    
 }
 
 .header_secundario {
@@ -81,6 +93,8 @@ p {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header_secundario div h2 {
@@ -95,6 +109,24 @@ p {
     font-size: 13.4px;
     line-height: 18px;
     letter-spacing: 2px;
+}
+
+.header_secundario div a {
+    text-decoration: none;
+    text-align: center;
+    background-color: #e8e8f3;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    color:black;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.9s;
+}
+
+.header_secundario div a:hover {
+    background-color: #c1dbff;
+    border: 3px solid blue;
 }
 
 main {
@@ -165,7 +197,7 @@ main .sessao_1 .card_DiasDe_Cultos {
 
 .card_DiasDe_Cultos .card span {
     background-color: #F3F4F6;
-    padding: 5px;
+    padding: 8px;
     border-radius: 8px;
 }
 
@@ -203,7 +235,7 @@ main .sessao_1 .card_DiasDe_Cultos {
 
 .sessao_2 .informacoes_De_Localizacao .endereco_Igreja {
     font-size: 13px;
-    width: 70%;
+    width: 80%;
     height: 170px;
     padding: 5px;
     border: 1px solid rgb(189, 189, 223);
@@ -241,49 +273,6 @@ main .sessao_1 .card_DiasDe_Cultos {
     height: 200px;
     border-radius: 4px;
     margin-top: 30px;
-}
-
-.sessao_2 .contato_inst {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    width: 70%;
-    height: 170px;
-    border: 1px solid rgb(189, 189, 223);
-    border-radius: 10px;
-    background-color: #dee3e9;
-    transition: 0.8s;
-}
-
-.sessao_2 .contato_inst:hover {
-    border: 3px solid rgb(136, 136, 236);
-    background-color: #7aa7e6;
-}
-
-.sessao_2 .contato_inst img {
-    margin: 10px;
-}
-
-.sessao_2 .contato_inst h2 {
-    font-size: 15.5px;
-    color: #1F2937;
-    margin-top: 0.40px;
-}
-
-.sessao_2 .contato_inst a {
-    text-decoration: none;
-    color: white;
-    background-color: #1D4ED8;
-    padding: 7px;
-    border-radius: 10px;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: 1.4px;
-    width: 130px;
-    text-align: center;
 }
 
 footer {
@@ -339,8 +328,16 @@ footer div a:hover {
         line-height: 23px;
     }
 
+    .header_secundario div a {
+        margin-top: 10px;
+    }
+
     .conteudo_principal .sessao_1 .nossos_encontros h2 {
         font-size: 250%;
+    }
+
+    .conteudo_principal .sessao_1 .nossos_encontros p {
+        font-size: 140%;
     }
 
         .conteudo_principal .sessao_1 .card_DiasDe_Cultos img {
@@ -358,7 +355,7 @@ footer div a:hover {
 
         .conteudo_principal .sessao_1 .card_DiasDe_Cultos span {
             font-size: 23px;
-            padding: 5px;
+            padding: 8px;
             background: #0d64e6;
             color: white;
         }
@@ -387,27 +384,6 @@ footer div a:hover {
         .conteudo_principal .sessao_2 .informacoes_De_Localizacao address iframe {
             height: 400px;
         }
-
-        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst {
-            height: auto;
-            padding: 26px;
-
-        }
-
-        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst img {
-            width: 50px;
-        }
-
-        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst h2 {
-            font-size: 25px;
-        }
-
-        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address .contato_inst a {
-            font-size: 24px;
-            width: 40%;
-            text-align: center;
-            background-color: #1D4ED8;
-        } 
 
         footer p {
             font-size: 14px;
