@@ -1,235 +1,80 @@
-# 🙏 Assembleia de Deus Canal Meriti
+# ⛪ Assembleia de Deus — Canal Meriti
 
-<p align="center">
-  <img src="./assets/logoo.png" width="120" alt="Logo da Igreja">
-</p>
+Site institucional desenvolvido para a **Assembleia de Deus — Canal Meriti**, com o objetivo de apresentar a igreja, seus encontros, horários e localização.
 
-<p align="center">
-  <strong>Um website institucional desenvolvido para apresentar a Assembleia de Deus Canal Meriti de forma simples, moderna e acolhedora.</strong>
-</p>
+## 🎯 Objetivo
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Concluído-22C55E?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Responsivo-Sim-3B82F6?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Licença-MIT-blue?style=for-the-badge">
-</p>
+Facilitar o acesso às principais informações da igreja e oferecer aos visitantes um canal simples para conhecer os dias de culto, horários e localização.
 
----
+## ✨ Funcionalidades
 
-# 📖 Sobre o projeto
+* 📖 Apresentação da igreja
+* 📅 Informações sobre os encontros
+* ⏰ Dias e horários dos cultos
+* 📍 Endereço e localização
+* 🗺️ Integração com Google Maps
+* 📱 Link para o Instagram oficial
+* 📱 Layout responsivo para diferentes dispositivos
 
-Este projeto foi desenvolvido com o objetivo de criar uma página institucional para a **Assembleia de Deus Canal Meriti**, oferecendo uma maneira prática para que visitantes encontrem informações importantes sobre a igreja.
+## 🛠️ Tecnologias
 
-O site foi pensado para transmitir uma identidade visual limpa, moderna e acolhedora, facilitando o acesso às informações principais, como dias de culto, endereço e redes sociais.
+* **HTML5** — estrutura da página
+* **CSS3** — estilização e responsividade
+* **Google Maps** — localização
+* **Google Fonts** — tipografia
 
-Além de servir como um projeto de estudo em desenvolvimento web, este trabalho também possui uma aplicação real, podendo ser utilizado pela igreja para divulgação na internet.
+## 📅 Encontros
 
----
+| Dia          | Atividade                  | Horário |
+| ------------ | -------------------------- | ------- |
+| Terça-feira  | Estudo Bíblico             | 19:00   |
+| Quarta-feira | Culto de Libertação        | 19:00   |
+| Domingo      | Culto de Louvor e Adoração | 19:00   |
 
-# ✨ Funcionalidades
+## 📍 Localização
 
-✅ Página totalmente responsiva
+**R. Dr. José Soares, 509 - Parque Analândia**
+**São João de Meriti - RJ, 25585-620**
 
-✅ Interface simples e intuitiva
+O site possui um mapa integrado para facilitar a localização da igreja.
 
-✅ Apresentação dos dias de culto
+## 📱 Responsividade
 
-✅ Informações de localização
+O projeto foi desenvolvido para proporcionar uma boa experiência em:
 
-✅ Mapa integrado com Google Maps
+* 📱 Celulares
+* 📲 Tablets
+* 💻 Computadores
 
-✅ Link direto para o Instagram da igreja
+A responsividade é implementada utilizando **CSS Media Queries**.
 
-✅ Design moderno utilizando tons de azul
+## 📂 Estrutura
 
-✅ Layout organizado utilizando Flexbox
-
----
-
-# 📸 Demonstração
-
-## Página Inicial
-
-> Adicione aqui um print da tela inicial.
-
-md
-![Página Inicial](./img_aplicacao/inicio.PNG)
-
-
----
-
-## Dias de Culto
-
-> Adicione um print da seção de cultos.
-
-md
-![Dias de Culto](./img_aplicacao/dias_Culto.PNG)
-
-
----
-
-## Localização
-
-> Adicione um print da seção de localização.
-
-md
-![Localização](./img_aplicacao/localizacao.PNG)
-
-
----
-
-# 🚀 Tecnologias utilizadas
-
-<p align="left">
-
-<img src="https://skillicons.dev/icons?i=html" height="55"/>
-
-<img src="https://skillicons.dev/icons?i=css" height="55"/>
-
-<img src="https://skillicons.dev/icons?i=vscode" height="55"/>
-
-<img src="https://skillicons.dev/icons?i=git" height="55"/>
-
-<img src="https://skillicons.dev/icons?i=github" height="55"/>
-
-</p>
-
----
-
-# 🎨 Paleta de cores
-
-| Cor | Código |
-|------|---------|
-| Azul Principal | `#279CF1` |
-| Azul Escuro | `#1D4ED8` |
-| Branco | `#FFFFFF` |
-| Cinza Claro | `#F9FAFB` |
-| Cinza Escuro | `#4B5563` |
-
----
-
-# 📂 Estrutura do projeto
-
-```
-📁 projeto
-│
-├── 📁 assets
-│   ├── logo.png
-│   ├── instagram.png
-│   ├── localizacao.png
-│   ├── icone_igreja.png
-│   └── ...
+```text
+Canal-Meriti/
 │
 ├── index.html
 ├── style.css
+├── assets/
+│   ├── logoo.png
+│   ├── logo_secundario.png
+│   ├── icone_igreja.png
+│   └── localizacao.png
+│
+├── docs/
+│   └── requerimento.md
+│
 └── README.md
 ```
 
----
+## 📋 Documentação
 
-# 📚 O que foi praticado neste projeto
+O levantamento e a documentação dos requisitos do projeto estão disponíveis em:
 
-Durante o desenvolvimento deste projeto foram colocados em prática diversos conceitos importantes do desenvolvimento Front-end.
+[`docs/requerimento.md`](docs/requerimento.md)
 
-- Estruturação semântica com HTML5
-- Flexbox
-- Responsividade com Media Queries
-- Organização de código CSS
-- Hierarquia de elementos
-- Tipografia utilizando Google Fonts
-- Inserção de mapa com Google Maps
-- Boas práticas de organização de arquivos
-- Efeitos de Hover
-- Border Radius
-- Box Model
-- Espaçamentos internos e externos
-- Transições utilizando CSS
+## 👨‍💻 Desenvolvedor
 
----
+**Wilson Oliveira**
 
-# 💡 Objetivos do projeto
-
-Este projeto teve como principais objetivos:
-
-- Desenvolver uma interface agradável para visitantes.
-- Praticar HTML e CSS na criação de um projeto real.
-- Melhorar a organização do código.
-- Aplicar conceitos de responsividade.
-- Criar um layout intuitivo para dispositivos móveis e computadores.
-
----
-
-# 📱 Responsividade
-
-O projeto foi desenvolvido seguindo a abordagem **Mobile First**, garantindo uma boa experiência em diferentes tamanhos de tela.
-
-✔ Smartphones
-
-✔ Tablets
-
-✔ Notebooks
-
-✔ Monitores Desktop
-
----
-
-# 🌎 Possíveis melhorias futuras
-
-- Página "Sobre Nós"
-- Página de Ministérios
-- Galeria de Fotos
-- Área de Eventos
-- Formulário de Contato
-- Integração com WhatsApp
-- Modo Escuro
-- Animações com JavaScript
-- Menu Mobile
-
----
-
-# 🛠 Como executar
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
-```
-
-Entre na pasta:
-
-```bash
-cd NOME-DO-REPOSITORIO
-```
-
-Abra o arquivo:
-
-```
-index.html
-```
-
-Não é necessário instalar nenhuma dependência.
-
----
-
-# 👨‍💻 Desenvolvedor
-
-Desenvolvido por **Wilson Oliveira**.
-
-Sou estudante de **Análise e Desenvolvimento de Sistemas**, apaixonado por tecnologia e desenvolvimento Front-end. Este projeto faz parte da minha jornada de aprendizado e da construção do meu portfólio.
-
-GitHub:
-> https://github.com/wilson385
-
----
-
-# ⭐ Gostou do projeto?
-
-Se este projeto foi útil para você ou serviu como inspiração, considere deixar uma ⭐ no repositório.
-
-Isso incentiva a continuar desenvolvendo novos projetos e compartilhando conhecimento com a comunidade.
-
----
-
-<p align="center">
-Feito com ❤️, dedicação e muito aprendizado.
-</p>
+Projeto desenvolvido como uma solução web institucional para facilitar o acesso às informações da Assembleia de Deus — Canal Meriti.
