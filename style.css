@@ -1,403 +1,706 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-* {
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS DE DESIGN
+   ========================================================================== */
+
+:root {
+    /* Paleta de Cores baseada na identidade visual Azul Institucional */
+    --color-primary: #0d47a1;         /* Azul Principal */
+    --color-primary-dark: #082d68;    /* Azul Escuro (Textos e Hover) */
+    --color-primary-light: #e8f0fe;   /* Azul Claro Suave (Fundos e destaques) */
+    --color-text-dark: #2c3e50;       /* Cor dos textos principais */
+    --color-text-muted: #606f7b;      /* Cor dos textos secundários */
+    --color-bg-light: #f8fafc;        /* Fundo claro para seções alternadas */
+    --color-white: #ffffff;           /* Branco puro */
+    --color-border: #e2e8f0;         /* Linhas de divisão suaves */
+    
+    /* Tipografia */
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    
+    /* Espaçamento e Layout */
+    --container-max-width: 1140px;
+    --border-radius: 8px;
+    --transition: all 0.25s ease-in-out;
+}
+
+/* Reset básico e configurações de caixa */
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-    background-color: #F9FAFB;;
+    font-family: var(--font-family);
+    color: var(--color-text-dark);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
- h2 {
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    letter-spacing: 0.8px;
-}
-
-p {
-    text-align: center;
-    padding: 6px;
-    letter-spacing: 0.6px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
-
-span {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    letter-spacing: 0.8px;
-}
-
-a {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    letter-spacing: 0.5px;
-}
-
-.header_primario {
-    background-color:#279CF1;
-}
-
-.header_primario .logo_titulo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.header_primario .logo_titulo img {
+.logo-img {
     width: 45px;
-    border-radius: 100px;
-    padding: 5px;
-}
-
-.header_primario div h1 {
-    text-align: center;
-    color: white;
-    font-size: 21px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-     letter-spacing: 0.5px;
-}
-
-.header_secundario {
-    background-color: #1D4ED8;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    /* margin-top: 15px; */
-    position: relative;
-}
-
-.header_secundario img {
-    position: absolute;
-    opacity: 0.05;
-}
-
-.header_secundario div {
-    margin: 80px auto 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header_secundario div h2 {
-    font-size: 20px;
-    padding: 10px;
-    letter-spacing: 1.3px;
-    text-align: center;
-}
-
-.header_secundario div p {
-    padding: 13px;
-    font-size: 13.4px;
-    line-height: 18px;
-    letter-spacing: 2px;
-}
-
-.header_secundario div a {
-    text-decoration: none;
-    text-align: center;
-    background-color: #e8e8f3;
-    width: 280px;
-    padding: 5px;
-    border-radius: 10px;
-    color:black;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.9s;
-}
-
-.header_secundario div a:hover {
-    background-color: #c1dbff;
-}
-
-main {
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-main .sessao_1 .nossos_encontros {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-main .sessao_1 .nossos_encontros h2 {
-   color: #1F2937;
-   font-weight: 900;
-   padding: 6px;
-   text-align: center;
-}
-
-main .sessao_1 .nossos_encontros p {
-    padding: 8px;
-}
-
-main .sessao_1 .nossos_encontros p, main .card_DiasDe_Cultos .card p {
-    color: #4B5563;
-}
-
-main .sessao_1 .card_DiasDe_Cultos {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-}
-
-.card_DiasDe_Cultos .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 80%;
-    height: auto;
-    padding: 20px;
-    border: 1px solid #cfdef3;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.card_DiasDe_Cultos .card:hover {
-    border: 4px solid #279CF1;
-
-}
-.card_DiasDe_Cultos .card img {
-    width: 45px;
-    background-color: #DBEAFE;
-    padding: 8px;
-    border-radius: 20px;
-    margin: 4px;
-}
-
-.card_DiasDe_Cultos .card h2 {
-    font-size: 17px;
-}
-
-.card_DiasDe_Cultos .card span {
-    background-color: #F3F4F6;
-    padding: 8px;
     border-radius: 8px;
 }
 
-.sessao_2 {
-    background-color: white;
-    margin-top: 60px;
-    border-radius: 10px;
-    border: 1px solid #E5E7EB;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.sessao_2 h2 {
-    margin-top: 40px;
-    color: #1F2937;
-    margin-bottom: 15px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.sessao_2 .informacoes_De_Localizacao {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    justify-content: center;
+ul {
+    list-style: none;
+}
+
+/* Estrutura de Container para Centralização */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.section {
+    padding: 4.5rem 0;
+}
+
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Tipografia de Seções */
+.section-tag {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-paragraph {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+/* Botões Estilizados */
+.btn {
+    display: inline-flex;
     align-items: center;
-    background-color: #F9FAFB;
-    padding: 40px;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-outline-header {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     border-radius: 20px;
 }
 
-.sessao_2 .informacoes_De_Localizacao address {
+.btn-outline-header:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* ==========================================================================
+   CABEÇALHO / HEADER
+   ========================================================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    height: 70px;
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
 }
 
-.sessao_2 .informacoes_De_Localizacao .endereco_Igreja {
-    font-size: 13px;
-    width: 80%;
-    height: 170px;
-    padding: 5px;
-    border: 1px solid rgb(189, 189, 223);
-    border-radius: 10px;
-    background-color: #dee3e9;
-    line-height: 16px;
+.logo-text {
     display: flex;
     flex-direction: column;
+}
+
+.logo-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    line-height: 1.1;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+/* Esconder elementos de controle mobile por padrão no desktop */
+.menu-toggle, .menu-icon {
+    display: none;
+}
+
+/* Navegação Desktop */
+.nav-menu {
+    display: flex;
     align-items: center;
-    transition: 0.8s;
+    gap: 2rem;
 }
 
-.sessao_2 .informacoes_De_Localizacao .endereco_Igreja:hover {
-    border: 3px solid rgb(194, 194, 214);
-    background-color: #cfdef3;
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.sessao_2 .informacoes_De_Localizacao .endereco_Igreja img {
-    margin: 10px;
+.nav-link {
+    font-weight: 500;
+    color: var(--color-text-dark);
+    font-size: 0.9375rem;
+    transition: var(--transition);
 }
 
-.sessao_2 .informacoes_De_Localizacao .endereco_Igreja h2 {
-    font-size: 15.5px;
-    color: #1F2937;
-    margin-top: -0.00px;
+.nav-link:hover {
+    color: var(--color-primary);
 }
 
-.sessao_2 .informacoes_De_Localizacao .endereco_Igreja p {
-   color: #4B5563;
-   margin-top: -10px;
+
+/* ==========================================================================
+   PÁGINA INICIAL / HERO
+   ========================================================================== */
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-white) 100%);
 }
 
-.sessao_2 .informacoes_De_Localizacao address iframe {
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.25rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-img {
     width: 100%;
-    height: 200px;
-    border-radius: 4px;
-    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    max-height: 420px;
 }
 
-footer {
-    background-color: #3116e0;
-    padding: 6px;
+
+/* ==========================================================================
+   QUEM SOMOS & MISSÃO
+   ========================================================================== */
+
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
 }
 
-footer div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.align-center {
     align-items: center;
 }
 
-footer p {
-    font-size: 12px;
-    color: white;
-    font-size: 11px;
-    letter-spacing: 1px;
+.about-img {
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-footer div a {
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    transition: 0.8s;
-    font-size: 11px;
+.highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
 }
 
-footer div a:hover {
-    color: #0cf720;
+.highlight-num {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
-/* estilo para telas maiores */
-@media (min-width: 801px) {
+.highlight-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
 
-    .header_primario .logo_titulo img {
-        width:120px;
-        padding: 12px;
-    }
+/* Seção de Cards (Propósito) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
 
-    .header_primario div h1 {
-        font-size: 240%;
-        padding: 8px;
-    }
+.card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
 
-    .header_secundario div h2 {
-        font-size: 200%;
-    }
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
 
-    .header_secundario div p {
-        font-size: 120%;
-        line-height: 23px;
-    }
+.card-icon {
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
 
-    .header_secundario div a {
-        margin-top: 10px;
-        font-size: 19px;
-       width: 310px;
-    }
+.card-title {
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+}
 
-    .conteudo_principal .sessao_1 .nossos_encontros h2 {
-        font-size: 250%;
-    }
-
-    .conteudo_principal .sessao_1 .nossos_encontros p {
-        font-size: 140%;
-    }
-
-        .conteudo_principal .sessao_1 .card_DiasDe_Cultos img {
-            width: 80px;
-            background: none;
-        }
-
-    .conteudo_principal .sessao_1 .card_DiasDe_Cultos h2 {
-        font-size: 30px;
-    }
-
-    .conteudo_principal .sessao_1 .card_DiasDe_Cultos p {
-            font-size: 24px;
-        }
-
-        .conteudo_principal .sessao_1 .card_DiasDe_Cultos span {
-            font-size: 23px;
-            padding: 8px;
-            background: #0d64e6;
-            color: white;
-        }
-
-        .conteudo_principal .sessao_2 h2 {
-            font-size: 200%;
-        }
-
-         .conteudo_principal .sessao_2 .endereco_Igreja {
-            height: auto;
-            padding: 40px;
-        }
-        
-        .conteudo_principal .sessao_2 .endereco_Igreja img {
-            width: 60px;
-        }
-
-        .conteudo_principal .sessao_2 .endereco_Igreja h2 {
-            font-size: 25px;
-        }
-        .conteudo_principal .sessao_2 .endereco_Igreja p {
-            font-size: 18px;
-            line-height: 25px;
-        }
-
-        .conteudo_principal .sessao_2 .informacoes_De_Localizacao address iframe {
-            height: 400px;
-        }
-
-        footer p {
-            font-size: 14px;
-        }
-
-        footer div a {
-            font-size: 14px;
-        }
-
-
+.card-text {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
 }
 
 
+/* ==========================================================================
+   HORÁRIOS DOS CULTOS
+   ========================================================================== */
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.schedule-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border-top: 4px solid var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.schedule-day {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 0.05em;
+}
+
+.schedule-time {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin: 0.25rem 0 1rem 0;
+}
+
+.schedule-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-desc {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+}
+
+.schedule-note {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+}
 
 
+/* ==========================================================================
+   SEÇÃO INSTAGRAM
+   ========================================================================== */
 
+.instagram-section {
+    background-color: var(--color-primary-light);
+}
+
+.instagram-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instagram-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.instagram-text {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+}
+
+
+/* ==========================================================================
+   LOCALIZAÇÃO E MAPA
+   ========================================================================== */
+
+.address-box {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1.5rem 0 2rem 0;
+    padding: 1.25rem;
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius);
+}
+
+.address-icon {
+    color: var(--color-primary);
+    margin-top: 0.2rem;
+}
+
+.address-details p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin-top: 0.25rem;
+}
+
+.map-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--color-border);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 380px;
+    display: block;
+}
+
+
+/* ==========================================================================
+   RODAPÉ / FOOTER
+   ========================================================================== */
+
+.footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.white-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+
+.white-text {
+    color: var(--color-white);
+}
+
+.footer-desc {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    max-width: 320px;
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.footer-address p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9375rem;
+    transition: var(--transition);
+}
+
+.footer-social-link:hover {
+    color: var(--color-white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablets e dispositivos até 992px */
+@media (max-width: 992px) {
+    .hero-container,
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .cards-grid,
+    .schedule-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Celulares e telas até 768px (Menu Mobile via Checkbox Hack) */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero-title {
+        font-size: 1.875rem;
+    }
+
+    /* Configuração do botão Hambúrguer */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-primary-dark);
+        border-radius: 3px;
+        transition: var(--transition);
+    }
+
+    /* Menu de Navegação Escondido */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: 2rem 1.25rem;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        gap: 1.5rem;
+        display: none; /* Escondido por padrão */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1.0625rem;
+    }
+
+    /* Técnica Checkbox Hack: Exibir menu quando marcado */
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    /* Animação do botão hambúrguer ao abrir */
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .cards-grid,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
